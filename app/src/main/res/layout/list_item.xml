@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/categoryModelsLayout">
+            <TextView
+                android:layout_width="100dp"
+                android:id="@+id/item_name"
+                android:layout_height="20dp"
+                android:text="Item1"/>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/categoryDownIcon"
+                android:src="@drawable/ic_launcher_foreground"/>
+        </LinearLayout>
+
+
+
+        <View
+            android:id="@+id/categorydivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/categoryModelsLayout"
+            android:background="@color/black" />
+
+        <!--ye nhi dekhe ga-->
+        <LinearLayout
+            android:id="@+id/categoryHiddenItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/categorydivider"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="20dp">
+
+            <!--is k ander sari Items honge-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/items_nested_rv"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
